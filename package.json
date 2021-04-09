@@ -1,0 +1,30 @@
+{
+  "name": "gatsby-source-medium-backup",
+  "version": "0.0.1",
+  "description": "Gatsby plugin to import your medium posts from a backup as markdown files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"No build script setup\"",
+    "develop": "cd example && gatsby develop"
+  },
+  "homepage": "https://github.com/eugenehp/gatsby-source-medium-backup#readme",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "source",
+    "medium",
+    "reactivelions"
+  ],
+  "author": "Eugene Hauptmann <eugene.hp2012@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugenehp/gatsby-source-medium-backup.git"
+  },
+  "dependencies": {
+    "cheerio": "*",
+    "turndown": "^7.0.0",
+    "unzipper": "^0.10.11"
+  }
+}
