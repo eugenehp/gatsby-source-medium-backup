@@ -87,12 +87,12 @@ Navigate to [http://localhost:8000/404](http://localhost:8000/404) and you'll se
 
 ```json
 {
-  title: 'How to build a react-native plugin in 2021',
-  author: 'Eugene Hauptmann',
-  authorLink: 'https://medium.com/@eugenehauptmann',
-  canonical: 'https://medium.com/@eugenehauptmann/how-to-build-a-react-native-plugin-in-2021-60704edc0c28',
-  timestamp: '2021-04-06T00:58:51.984Z',
-  exportDate: 'April 6, 2021'
+  "title": "How to build a react-native plugin in 2021",
+  "author": "Eugene Hauptmann",
+  "authorLink": "https://medium.com/@eugenehauptmann",
+  "canonical": "https://medium.com/@eugenehauptmann/how-to-build-a-react-native-plugin-in-2021-60704edc0c28",
+  "timestamp": "2021-04-06T00:58:51.984Z",
+  "exportDate": "April 6, 2021"
 }
 ```
 
@@ -100,7 +100,7 @@ Navigate to [http://localhost:8000/404](http://localhost:8000/404) and you'll se
 
 Thank you to our sponsors:
 
-[<img width="300px" src="https://user-images.githubusercontent.com/1857263/114124204-c4e1eb80-98a8-11eb-80ab-64683c24bbc5.png" alt="Reactive Lions™">](https://www.reactivelions.com)
+[<img width="300px" src="https://user-images.githubusercontent.com/1857263/114124204-c4e1eb80-98a8-11eb-80ab-64683c24bbc5.png" alt="Reactive Lions™" target="_blank">](https://www.reactivelions.com)
 
 ## License
 
