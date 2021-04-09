@@ -1,5 +1,19 @@
 # gatsby-source-medium-backup
 
+[![GitHub license](https://img.shields.io/github/license/eugenehp/gatsby-source-medium-backup.svg?color=blue&style=for-the-badge)](./LICENSE)
+[![npm](https://img.shields.io/npm/v/gatsby-source-medium-backup.svg?color=green&style=for-the-badge)](https://www.npmjs.com/package/gatsby-source-medium-backup)
+[![npm downloads](https://img.shields.io/npm/dw/gatsby-source-medium-backup.svg?label=npm%20downloads&style=for-the-badge)](https://npmcharts.com/compare/gatsby-source-medium-backup?minimal=true)
+[![total npm downloads](https://img.shields.io/npm/dt/gatsby-source-medium-backup.svg?label=total%20npm%20downloads&style=for-the-badge)](https://npmcharts.com/compare/gatsby-source-medium-backup?minimal=true)
+[![GitHub watchers](https://img.shields.io/github/watchers/eugenehp/gatsby-source-medium-backup.svg?style=for-the-badge)](https://github.com/eugenehp/gatsby-source-medium-backup/watchers)
+[![GitHub stars](https://img.shields.io/github/stars/eugenehp/gatsby-source-medium-backup.svg?label=GitHub%20stars&style=for-the-badge)](https://github.com/eugenehp/gatsby-source-medium-backup/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/eugenehp/gatsby-source-medium-backup.svg?style=for-the-badge)](https://github.com/eugenehp/gatsby-source-medium-backup/network/members)
+[![open bugs](https://img.shields.io/github/issues-raw/eugenehp/gatsby-source-medium-backup/bug.svg?color=d73a4a&label=open%20bugs&style=for-the-badge)](https://github.com/eugenehp/gatsby-source-medium-backup/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Abug)
+[![total open issues](https://img.shields.io/github/issues-raw/eugenehp/gatsby-source-medium-backup.svg?label=total%20open%20issues&style=for-the-badge)](https://github.com/eugenehp/gatsby-source-medium-backup/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/eugenehp/gatsby-source-medium-backup.svg?style=for-the-badge)](https://github.com/eugenehp/gatsby-source-medium-backup/pulls)
+
+[![Packagephobia](https://badgen.net/packagephobia/install/gatsby-source-medium-backup)](https://packagephobia.com/result?p=gatsby-source-medium-backup)
+[![Bundlephobia](https://badgen.net/bundlephobia/min/gatsby-source-medium-backup)](https://bundlephobia.com/result?p=gatsby-source-medium-backup@0.0.1)
+
 Gatsby plugin to import your medium posts from a backup as markdown files.
 
 ## Installation
