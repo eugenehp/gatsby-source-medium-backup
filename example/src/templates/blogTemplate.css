@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+.blog-post-content {
+  margin: 0;
+}
+
+figure.graf.graf--figure.graf--layoutFillWidth {
+  width: 100vw;
+  margin: 0;
+}
+
+figure.graf.graf--figure.graf--layoutFillWidth > img {
+  width: 100%;
+  margin: 0;
+}
+
+figure > img,
+figure > figcaption {
+  margin: auto 25%;  
+}
