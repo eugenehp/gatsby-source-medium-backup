@@ -14,7 +14,7 @@ export default function Template({
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        <h1>{frontmatter.author}</h1>
+        {/* <h1>{frontmatter.author}</h1> */}
       </div>
     </div>
   )

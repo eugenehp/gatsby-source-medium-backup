@@ -20,3 +20,32 @@ figure > img,
 figure > figcaption {
   margin: auto 25%;  
 }
+
+.section-inner.sectionLayout--outsetRow {
+  display: flex;
+  width: 70%;
+  margin: auto 15%;
+}
+
+div.section-inner.sectionLayout--outsetRow > figure {
+  margin: 10px;
+}
+
+div.section-inner.sectionLayout--outsetRow > figure > img {
+  width: 100%;
+  margin: 0;
+}
+
+div.section-inner.sectionLayout--outsetRow > figure > figcaption {
+  margin-top: 10px;
+  margin-left: -25vw;
+}
+
+figure {
+  margin: 0;
+}
+
+h1, h2, p, ol, ul {
+  margin-left: 25%;
+  margin-right: 25%;
+}
