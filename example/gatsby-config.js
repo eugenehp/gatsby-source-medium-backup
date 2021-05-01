@@ -15,7 +15,9 @@ module.exports = {
       options: {
         source: `${__dirname}/medium-export.zip`,
         destination: markdownPages,
-        prefix: 'blog' // blog/post-title
+        prefix: 'blog', // blog/post-title,
+        h1h2: true,
+        // h2h3: true
       },
     },
 

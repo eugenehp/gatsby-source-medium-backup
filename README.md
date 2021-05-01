@@ -60,7 +60,9 @@ Add markdown generation **after** above plugin!
   options: {
     path: markdownPages,
     name: `markdown-pages`,
-    //prefix: 'blog' //optional
+    //prefix: 'blog' // optional: prefix all slugs
+    h1h2: true, // optional: convert all h3 and h4 to h1 and h2
+    // h2h3: true, // optional: convert all h3 and h4 to h2 and h3
   },
 },
 `gatsby-transformer-remark`,

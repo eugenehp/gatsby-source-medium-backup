@@ -22,7 +22,7 @@ const copyParentForImageRows = (content, node) => {
   return shouldCopy ? node.outerHTML : content
 }
 
-const html2Markdown = (content) => {
+const html2Markdown = (content, h1h2, h2h3) => {
   const $ = cheerio.load(content)
 
   const body = $(BODY_SELECTOR).html()
@@ -36,8 +36,18 @@ const html2Markdown = (content) => {
   
   const markdown = TurndownService
     .turndown(body)
-    .replaceAll('####', '##') // original HTML file has title as H3 and sub sections as H4
-    .replaceAll('###', '#') // change it to H1 and H2 respectively
+
+  if(h1h2){
+    return markdown
+      .replaceAll('####', '##') // original HTML file has title as H3 and sub sections as H4
+      .replaceAll('###', '#') // change it to H1 and H2 respectively
+  }
+
+  if(h2h3){
+    return markdown
+      .replaceAll('####', '###') // original HTML file has title as H3 and sub sections as H4
+      .replaceAll('###', '##') // change it to H1 and H2 respectively
+  }
 
   return markdown
 }

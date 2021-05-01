@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.4
+
+- Added `h1h2`, convert all h3 and h4 to h1 and h2.
+- Added `h2h3`, convert all h3 and h4 to h2 and h3.
+- Added `image` thumbnail, which is a first image in the post.
+
 ## 0.0.3
 
 - Added slug prefix.
