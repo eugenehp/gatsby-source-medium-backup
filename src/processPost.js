@@ -3,12 +3,12 @@ const { parseFile } = require('./parseFile')
 const { html2Markdown } = require('./html2Markdown')
 const { exportMarkdown } = require('./exportMarkdown')
 
-const processPost = async (filename, content, destination) => {
+const processPost = async (filename, content, destination, prefix) => {
   const IS_POST = content.indexOf(HTML_POST_QUALIFIER) >= 0;
 
   if(IS_POST){
     const [basename, ext] = filename.split('.');
-    const metadata = parseFile(basename, content);
+    const metadata = parseFile(basename, content, prefix);
     const markdown = html2Markdown(content);
 
     const result = exportMarkdown(destination, basename, metadata, markdown)

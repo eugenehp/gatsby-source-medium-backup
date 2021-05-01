@@ -60,6 +60,7 @@ Add markdown generation **after** above plugin!
   options: {
     path: markdownPages,
     name: `markdown-pages`,
+    //prefix: 'blog' //optional
   },
 },
 `gatsby-transformer-remark`,

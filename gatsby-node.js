@@ -6,6 +6,7 @@ const { setVerbose, green, UTF8 } = require('./src/utils');
 exports.onPreInit = async (_, pluginOptions) => {
   const before = new Date().getTime();
   const {source, destination} = pluginOptions
+  const prefix = pluginOptions['prefix'] ? pluginOptions['prefix'] : null;
 
   if(pluginOptions.verbose){
     setVerbose(pluginOptions.verbose)
@@ -20,7 +21,7 @@ exports.onPreInit = async (_, pluginOptions) => {
 
   await getPostsFromZip(source, async (filename, buffer) => {
     const content = (await buffer).toString(UTF8)
-    if(await processPost(filename, content, destination)) {
+    if(await processPost(filename, content, destination, prefix)) {
       markdownPagesCreated++
     }
     counter++

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3
+
+- Added slug prefix.
+
 ## 0.0.2
 
 - Skipping drafts.

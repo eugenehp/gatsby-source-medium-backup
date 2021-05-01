@@ -20,7 +20,7 @@ const {
     }
   ```
 */
-const parseFile = (basename, content) => {
+const parseFile = (basename, content, prefix) => {
   const [date, slug] = basename.split('_');
 
   const $ = cheerio.load(content)
@@ -35,7 +35,7 @@ const parseFile = (basename, content) => {
   const metadata = {
     title, 
     date,
-    slug,
+    slug: prefix ? `${prefix}/${slug}` : slug,
     author,
     authorLink,
     canonical,
