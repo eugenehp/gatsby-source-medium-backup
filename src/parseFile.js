@@ -16,7 +16,8 @@ const {
       authorLink: 'https://medium.com/@eugenehauptmann',
       canonical: 'https://medium.com/@eugenehauptmann/how-to-build-a-react-native-plugin-in-2021-60704edc0c28',
       timestamp: '2021-04-06T00:58:51.984Z',
-      exportDate: 'April 6, 2021'
+      exportDate: 'April 6, 2021',
+      image: '...'
     }
   ```
 */

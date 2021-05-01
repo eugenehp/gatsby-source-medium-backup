@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.5
+
+- Added code `pre` tags exception.
+
 ## 0.0.4
 
 - Added `h1h2`, convert all h3 and h4 to h1 and h2.

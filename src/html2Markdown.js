@@ -32,7 +32,7 @@ const html2Markdown = (content, h1h2, h2h3) => {
       replacement: copyParentForImageRows
   })
 
-  TurndownService.keep(['figure'])
+  TurndownService.keep(['figure', 'pre'])
   
   const markdown = TurndownService
     .turndown(body)
