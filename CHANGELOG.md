@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.6
+
+- Added description for each post.
+- Added deafult `img` tag `alt` attribute.
+
 ## 0.0.5
 
 - Added code `pre` tags exception.
