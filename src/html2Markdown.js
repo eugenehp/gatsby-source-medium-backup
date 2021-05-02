@@ -32,8 +32,6 @@ const html2Markdown = (content, h1h2, h2h3) => {
   $('img').replaceWith( function(){
     const src = $(this).attr('src');
     const alt = $(this).attr('alt');
-
-    console.log({alt, src})
     
     if(!alt){
       return $(this).attr('alt', `Image ${counter++} – ${title}`);

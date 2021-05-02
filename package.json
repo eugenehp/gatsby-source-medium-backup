@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-medium-backup",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Gatsby plugin to import your medium posts from a backup as markdown files.",
   "main": "index.js",
   "scripts": {
