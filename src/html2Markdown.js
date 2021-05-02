@@ -25,11 +25,28 @@ const copyParentForImageRows = (content, node) => {
 const html2Markdown = (content, h1h2, h2h3) => {
   const $ = cheerio.load(content)
 
-  const body = $(BODY_SELECTOR).html()
+  let body = $(BODY_SELECTOR).html()
+  const title = $(body).find('h3').first().text()
+  let counter = 1;
+
+  $('img').replaceWith( function(){
+    const src = $(this).attr('src');
+    const alt = $(this).attr('alt');
+
+    console.log({alt, src})
+    
+    if(!alt){
+      return $(this).attr('alt', `Image ${counter++} – ${title}`);
+    }
+
+    return this;
+  })
+
+  body = $(BODY_SELECTOR).html()
 
   TurndownService.addRule('Row', {
-      filter: ['div'],
-      replacement: copyParentForImageRows
+    filter: ['div'],
+    replacement: copyParentForImageRows
   })
 
   TurndownService.keep(['figure', 'pre'])
