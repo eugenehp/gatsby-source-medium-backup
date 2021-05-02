@@ -33,6 +33,7 @@ const parseFile = (basename, content, prefix) => {
   const footer = $(FOOTER_SELECTOR).text().split('on')[1]
   const exportDate = footer.substr(1, footer.length - 2)
   const image = $('img').attr('src')
+  const description = $('section > div.section-content').find('p').first().text()
 
   const metadata = {
     title, 
@@ -43,7 +44,8 @@ const parseFile = (basename, content, prefix) => {
     canonical,
     timestamp,
     exportDate,
-    image
+    image,
+    description
   }
 
   return metadata
