@@ -4,7 +4,7 @@ const TurndownService = require('turndown')()
 const { BODY_SELECTOR } = require('./utils')
 
 const IMAGES_ROW = `section-inner sectionLayout--outsetRow`
-const copyParentForImageRows = (content, node) => {
+const copyParentForImageRows = (content, node, options) => {
   const $ = cheerio.load("")
   const element = $(node.outerHTML);
   let shouldCopy = false;
@@ -23,19 +23,25 @@ const copyParentForImageRows = (content, node) => {
 }
 
 const html2Markdown = (content, h1h2, h2h3) => {
-  const $ = cheerio.load(content)
+  const $ = cheerio.load(content, {recognizeSelfClosing: true, xmlMode: true})
 
   let body = $(BODY_SELECTOR).html()
   const title = $(body).find('h3').first().text()
   let counter = 1;
 
   $('img').replaceWith( function(){
+    console.log($(this).html())
     const src = $(this).attr('src');
-    const alt = $(this).attr('alt');
+    let alt = $(this).attr('alt');
+    const figcaption = $(this).parent().find('figcaption').first().text()
     
     if(!alt){
-      return $(this).attr('alt', `Image ${counter++} – ${title}`);
+      $(this).attr('alt', figcaption.length > 0 ? figcaption : `Image ${counter++} – ${title}`);
     }
+
+    alt = $(this).attr('alt');
+
+    console.log($(this).html())
 
     return this;
   })
