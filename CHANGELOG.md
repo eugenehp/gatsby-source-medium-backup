@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.9
+
+- Removed logging.
+
 ## 0.0.8
 
 - Proper image alt tag generation based on figcaption

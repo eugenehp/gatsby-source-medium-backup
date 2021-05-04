@@ -30,7 +30,6 @@ const html2Markdown = (content, h1h2, h2h3) => {
   let counter = 1;
 
   $('img').replaceWith( function(){
-    console.log($(this).html())
     const src = $(this).attr('src');
     let alt = $(this).attr('alt');
     const figcaption = $(this).parent().find('figcaption').first().text()
