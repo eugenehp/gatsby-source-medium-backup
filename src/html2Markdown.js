@@ -26,6 +26,8 @@ const html2Markdown = (content, h1h2, h2h3) => {
   const $ = cheerio.load(content, {recognizeSelfClosing: true, xmlMode: true})
 
   let body = $(BODY_SELECTOR).html()
+  body = `<body>${body}</body>`
+
   const title = $(body).find('h3').first().text()
   let counter = 1;
 
@@ -40,7 +42,7 @@ const html2Markdown = (content, h1h2, h2h3) => {
 
     alt = $(this).attr('alt');
 
-    console.log($(this).html())
+    // console.log($(this).html())
 
     return this;
   })

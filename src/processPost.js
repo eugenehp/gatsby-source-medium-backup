@@ -3,7 +3,7 @@ const { parseFile } = require('./parseFile')
 const { html2Markdown } = require('./html2Markdown')
 const { exportMarkdown } = require('./exportMarkdown')
 
-const processPost = async (filename, content, destination, prefix, h1h2, h2h3) => {
+const processPost = async (filename, content, destination, prefix, h1h2, h2h3, remove) => {
   const IS_POST = content.indexOf(HTML_POST_QUALIFIER) >= 0;
 
   if(IS_POST){
@@ -11,7 +11,13 @@ const processPost = async (filename, content, destination, prefix, h1h2, h2h3) =
     const metadata = parseFile(basename, content, prefix);
     const markdown = html2Markdown(content, h1h2, h2h3);
 
-    const result = exportMarkdown(destination, basename, metadata, markdown)
+    let filteredMarkdown = markdown
+
+    remove.map( line => {
+      filteredMarkdown = filteredMarkdown.split(line).join('')
+    })
+
+    const result = exportMarkdown(destination, basename, metadata, filteredMarkdown)
     if(result){
       logger(`\u001b[32msuccess\u001b[39m Converted medium post ${filename}.`)
       return result

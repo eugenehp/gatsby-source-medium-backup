@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.10
+
+- Updated parser to comply with new structure on medium
+- Added `remove` functionality to remove third party links
+
 ## 0.0.9
 
 - Removed logging.

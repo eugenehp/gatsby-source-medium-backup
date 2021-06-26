@@ -9,6 +9,7 @@ exports.onPreInit = async (_, pluginOptions) => {
   const prefix = pluginOptions['prefix'] ? pluginOptions['prefix'] : null;
   const h1h2 = pluginOptions['h1h2'] ? pluginOptions['h1h2'] : false;
   const h2h3 = pluginOptions['h2h3'] ? pluginOptions['h2h3'] : false;
+  const remove = pluginOptions['remove'] ? pluginOptions['remove'] : []
 
   if(pluginOptions.verbose){
     setVerbose(pluginOptions.verbose)
@@ -23,7 +24,7 @@ exports.onPreInit = async (_, pluginOptions) => {
 
   await getPostsFromZip(source, async (filename, buffer) => {
     const content = (await buffer).toString(UTF8)
-    if(await processPost(filename, content, destination, prefix, h1h2, h2h3)) {
+    if(await processPost(filename, content, destination, prefix, h1h2, h2h3, remove)) {
       markdownPagesCreated++
     }
     counter++

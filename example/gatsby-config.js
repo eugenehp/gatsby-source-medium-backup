@@ -18,6 +18,7 @@ module.exports = {
         prefix: 'blog', // blog/post-title,
         h1h2: true,
         // h2h3: true
+        remove: ['A LINE YOU WANT TO DELETE']
       },
     },
 
